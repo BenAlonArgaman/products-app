@@ -6,7 +6,7 @@ import { Pressable, SafeAreaView, Text } from "react-native";
 import { CardSkeleton } from "@/components/ui/CardSkeleton";
 
 export default function Page() {
-  const { categories, isLoading, error } = useCategories();
+  const { categories, refetch, isLoading, error } = useCategories();
 
   if (isLoading) {
     return (
@@ -27,8 +27,12 @@ export default function Page() {
       <SafeAreaView
         style={{ flex: 1, justifyContent: "center", alignItems: "center" }}
       >
-        <Text>Error loading categories</Text>
-        <Pressable onPress={() => {}}>
+        <Text>Something Went Wrong</Text>
+        <Pressable
+          onPress={() => {
+            refetch();
+          }}
+        >
           <Text className="text-blue-500 mt-2">Tap to retry</Text>
         </Pressable>
       </SafeAreaView>
