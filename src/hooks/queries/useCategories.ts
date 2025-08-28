@@ -2,9 +2,11 @@ import { useMemo } from "react";
 import { useProducts } from "./useProducts";
 import { processProductsToCategories } from "@/utils/categoryUtils";
 
+// Hook to fetch and process categories from products
 export const useCategories = () => {
-  const { data: productsResponse, isLoading, error } = useProducts();
+  const { data: productsResponse, refetch, isLoading, error } = useProducts();
 
+  // Process products into categories using useMemo for optimization
   const categories = useMemo(() => {
     if (!productsResponse?.products) return [];
     return processProductsToCategories(productsResponse.products);
@@ -12,6 +14,7 @@ export const useCategories = () => {
 
   return {
     categories,
+    refetch,
     isLoading,
     error,
     totalProducts: productsResponse?.total,

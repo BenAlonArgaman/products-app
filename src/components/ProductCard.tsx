@@ -12,6 +12,7 @@ type ProductCardProps = {
 const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <View className="flex-1 m-2 gap-2 rounded-lg border border-neutral-200  overflow-hidden p-2">
+      {/* Product Image */}
       <View className="w-full bg-neutral-200 rounded-lg">
         <Image
           source={{ uri: product.thumbnail }}
@@ -21,6 +22,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         />
       </View>
 
+      {/* Product Details */}
       <View className="justify-between flex-1 gap-2 p-2">
         <View>
           <Text className="text-base font-light">{product.title}</Text>

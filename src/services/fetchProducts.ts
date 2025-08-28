@@ -1,4 +1,3 @@
-// src/services/fetchProducts.ts
 import axios from "axios";
 import type { ProductsResponse } from "../types/product";
 

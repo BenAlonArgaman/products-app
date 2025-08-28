@@ -12,7 +12,7 @@ export default function Page() {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
         <FlashList
-          data={Array(6).fill(null)} // Create 6 skeleton items
+          data={Array(6).fill(null)}
           numColumns={2}
           renderItem={() => <CardSkeleton />}
           showsVerticalScrollIndicator={false}

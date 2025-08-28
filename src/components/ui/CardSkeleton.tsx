@@ -4,11 +4,7 @@ export const CardSkeleton = () => (
   <View className="flex-1 m-2 gap-2 rounded-lg border border-neutral-200 overflow-hidden p-2">
     <SkeletonPlaceholder borderRadius={8}>
       {/* Image skeleton - matches aspectRatio: 1 */}
-      <SkeletonPlaceholder.Item
-        width="100%"
-        height={150} // Adjust based on your card width
-        borderRadius={8}
-      />
+      <SkeletonPlaceholder.Item width="100%" height={150} borderRadius={8} />
 
       {/* Text content skeleton */}
       <SkeletonPlaceholder.Item marginTop={8}>

@@ -9,7 +9,7 @@ import { formatCategoryName } from "@/utils/categoryUtils";
 
 const category = () => {
   const { name } = useLocalSearchParams<{ name: string }>();
-  const { products, isLoading, error } = useProductsByCategory(name);
+  const { products } = useProductsByCategory(name);
   const navigation = useNavigation();
 
   const formattedTitle = useMemo(

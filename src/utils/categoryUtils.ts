@@ -1,5 +1,6 @@
-import type { Product, ProductsResponse } from "@/types/product";
+import type { Product } from "@/types/product";
 
+// Helper function to format category names
 export const formatCategoryName = (categoryName: string): string => {
   return categoryName
     .split("-")
@@ -12,6 +13,7 @@ export const processProductsToCategories = (
 ): CategorySummary[] => {
   if (!products || products.length === 0) return [];
 
+  // Group products by category
   const categoryGroups = products.reduce((acc, product) => {
     const category = product.category;
     if (!acc[category]) {
@@ -21,6 +23,7 @@ export const processProductsToCategories = (
     return acc;
   }, {} as Record<string, Product[]>);
 
+  // Transform grouped data into desired format
   return Object.entries(categoryGroups).map(
     ([categoryName, categoryProducts]) => ({
       name: categoryName,
