@@ -18,7 +18,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
           style={{ width: "100%", aspectRatio: 1 }}
           contentFit="cover"
           placeholder={blurhash}
-          transition={1000}
         />
       </View>
 
