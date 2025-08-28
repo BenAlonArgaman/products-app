@@ -6,13 +6,29 @@
     "output": "static"
   },
   "plugins": [
+    "react-native-bottom-tabs",
+    [
+      "expo-build-properties",
+      {
+        "ios": {
+          "useFrameworks": "static"
+        }
+      }
+    ],
     [
       "expo-router",
       {
         "origin": "https://n"
       }
-    ]
+    ],
+    "expo-build-properties"
   ],
   "name": "sqlink",
-  "slug": "sqlink"
+  "slug": "sqlink",
+  "android": {
+    "package": "com.benalonso98.sqlink"
+  },
+  "ios": {
+    "bundleIdentifier": "com.benalonso98.sqlink"
+  }
 }
