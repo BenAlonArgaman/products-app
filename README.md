@@ -1,20 +1,21 @@
-# Expo Router and Tailwind CSS
+## Getting Started
 
-Use [Expo Router](https://docs.expo.dev/router/introduction/) with [Nativewind](https://www.nativewind.dev/v4/overview/) styling.
-
-## Launch your own
-
-[![Launch with Expo](https://github.com/expo/examples/blob/master/.gh-assets/launch.svg?raw=true)](https://launch.expo.dev/?github=https://github.com/expo/examples/tree/master/with-tailwindcss)
-
-## 🚀 How to use
+1. Install dependencies:
 
 ```sh
-npx create-expo-app -e with-tailwindcss
+npm install
 ```
 
-## Deploy
+2. Start the development server:
 
-Deploy on all platforms with Expo Application Services (EAS).
+```sh
+npm start
+```
 
-- Deploy the website: `npx eas-cli deploy` — [Learn more](https://docs.expo.dev/eas/hosting/get-started/)
-- Deploy on iOS and Android using: `npx eas-cli build` — [Learn more](https://expo.dev/eas)
+3. Run on your device using the Expo Go app or simulator.
+
+## Tech Stack
+
+- Expo Router for navigation
+- Tailwind CSS (NativeWind) for styling
+- React Native
